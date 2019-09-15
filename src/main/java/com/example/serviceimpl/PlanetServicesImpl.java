@@ -2,37 +2,37 @@ package com.example.serviceimpl;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.http.ResponseEntity;
+import com.example.daoimpl.PlanetDaoImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.dto.Planets;
 import com.example.services.PlanetServices;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PlanetServicesImpl implements PlanetServices {
 
-	
-	List planetList = new ArrayList();
-	
+	@Autowired
+    PlanetDaoImpl planetDaoimpl = new PlanetDaoImpl();
 
 	@Override
 	public Planets savePlanets(Planets planets) {
-		
-//		planets.setId(25);
-//		planets.setName("Moon");
+		planetDaoimpl.savePlanets(planets);
 		return planets;
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Planets> getAllPlanets() {
-		
-		planetList.add(new Planets(1,"Moon"));
-		planetList.add(new Planets(2,"Jupitar"));
-		planetList.add(new Planets(3,"Earth"));
-		
-		return planetList;
+
+		return planetDaoimpl.getAllPlanets();
+	}
+
+	@Override
+	public Planets getPlanetsById(int id) {
+
+		return planetDaoimpl.getPlanetsById(id);
 	}
 
 	@Override
@@ -41,21 +41,15 @@ public class PlanetServicesImpl implements PlanetServices {
 	}
 
 	@Override
+	public Integer deletePlanetById(int id) {
+
+		planetDaoimpl.deleteById(id);
+		return 1;
+	}
+
+	@Override
 	public String updatePlanetsById(int id) {
 		return null;
-	}
-	
-	@Override
-	public Planets getPlanetsById(int id) {
-		
-		Predicate<Planets>  byId = p -> p.getId()==id;
-		
-		return filtersPlanets(byId);	
-	}
-	
-	private Planets filtersPlanets(Predicate<Planets> predicate)
-	{
-		return getAllPlanets().stream().filter(predicate).findFirst().orElse(null);
 	}
 
 	@Override
@@ -63,7 +57,4 @@ public class PlanetServicesImpl implements PlanetServices {
 		// TODO Auto-generated method stub
 		return "fb";
 	}
-	
-	
-
 }

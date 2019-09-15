@@ -10,7 +10,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Planets {
-	
-	private int id;
+
+    private int id;
 	private String name;
+	private int distance;
 }
