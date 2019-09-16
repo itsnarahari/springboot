@@ -8,6 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import com.example.controller.RestController;
 
 @SpringBootApplication
+@EnableAutoConfiguration
 @ComponentScan(basePackages = {"com.example.controller","com.example.dto","com.example.services","com.example.serviceimpl","com.example.dao","com.example.daoimpl"})
 public class DemoApplication {
 
