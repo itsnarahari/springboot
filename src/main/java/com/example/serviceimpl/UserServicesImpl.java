@@ -3,6 +3,7 @@ package com.example.serviceimpl;
 import java.util.List;
 
 import com.example.daoimpl.UsersDaoImpl;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.dto.Users;
@@ -13,12 +14,18 @@ import org.springframework.stereotype.Service;
 public class UserServicesImpl implements UserServices {
 
 	@Autowired
-	UsersDaoImpl usersDaoImpl = new UsersDaoImpl();
+	UsersDaoImpl usersDaoImpl;
 
 	@Override
-	public Boolean saveUsers(Users users) {
-
+	public String saveUser(Users users)
+	{
 		return usersDaoImpl.saveUser(users);
+	}
+
+	@Override
+	public boolean isEmailExist(String mail)
+	{
+		return usersDaoImpl.isEmailExist(mail);
 	}
 
 	@SuppressWarnings("unchecked")
