@@ -14,19 +14,19 @@ public class Test
         JSONObject jo = new JSONObject();
         jo.put("id", 2121);
         jo.put("email", "Doe@gmail.com");
-
         JSONObject jo2 = new JSONObject();
         jo2.put("id", 977);
         jo2.put("email", "Dgsfgoe@gmail.com");
 
         List email = new ArrayList();
         List id = new ArrayList();
-
-
-
+        String a[];
         JSONArray ja = new JSONArray();
         ja.put(jo);
         ja.put(jo2);
+
+        System.out.println(ja);
+
 
         Iterator iterator = ja.iterator();
 
@@ -35,6 +35,7 @@ public class Test
         {
            js = (JSONObject) iterator.next();
             email.add(js.get("email"));
+
             id.add(js.get("id"));
         }
 

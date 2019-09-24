@@ -27,10 +27,10 @@ import java.sql.*;
 import java.util.List;
 
 @Repository
-@Service
 @Configuration
 @Transactional
 public class UsersDaoImpl implements UsersDAO {
+
 
 
 	@Autowired

@@ -1,5 +1,6 @@
 com/example/dao/UsersDAO.class
 com/example/controller/RestController.class
+com/example/util/Swagger2Config.class
 com/example/util/UsersRowMappers.class
 com/example/daoimpl/UsersDaoImpl$1.class
 com/example/serviceimpl/UserServicesImpl.class

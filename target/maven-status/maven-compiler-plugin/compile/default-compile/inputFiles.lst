@@ -1,8 +1,10 @@
 /home/agile/IdeaProjects/springboot/src/main/java/com/example/util/UsersRowMappers.java
 /home/agile/IdeaProjects/springboot/src/main/java/com/example/util/Test.java
 /home/agile/IdeaProjects/springboot/src/main/java/com/example/dao/UsersDAO.java
+/home/agile/IdeaProjects/springboot/src/main/java/com/example/util/Swagger2Config.java
 /home/agile/IdeaProjects/springboot/src/main/java/com/example/controller/RestController.java
 /home/agile/IdeaProjects/springboot/src/main/java/com/example/dto/Users.java
+/home/agile/IdeaProjects/springboot/src/main/java/com/example/security/SecurityConfig.java
 /home/agile/IdeaProjects/springboot/src/main/java/com/example/util/KeyValue.java
 /home/agile/IdeaProjects/springboot/src/main/java/com/example/services/UserServices.java
 /home/agile/IdeaProjects/springboot/src/main/java/com/example/daoimpl/UsersDaoImpl.java
