@@ -13,4 +13,5 @@ public interface UsersDAO {
     public Integer updateUser(Users users);
     public Integer deleteUsersById(int id);
     public boolean isEmailExist(String mail);
+
 }
