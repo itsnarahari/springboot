@@ -1,7 +1,7 @@
 package com.example.util;
 
 
-import com.example.dto.Users;
+import com.example.model.Customer;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
@@ -11,7 +11,7 @@ public class UsersRowMappers implements RowMapper {
 
     @Override
     public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
-        Users users = new Users();
+        Customer users = new Customer();
         users.setId(rs.getInt("id"));
         users.setName(rs.getString("name"));
         users.setEmail(rs.getString("email"));
